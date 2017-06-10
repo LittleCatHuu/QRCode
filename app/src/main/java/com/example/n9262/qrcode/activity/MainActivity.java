@@ -2,6 +2,7 @@ package com.example.n9262.qrcode.activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import com.example.n9262.qrcode.R;
 import com.example.n9262.qrcode.ScanCodeActivity;
 import com.example.n9262.qrcode.activity.BaseActivity;
+import com.example.n9262.qrcode.util.QRCode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,12 +38,12 @@ public class MainActivity extends BaseActivity {
     }
 
     private void inits() {
-     /*   Bitmap bitmap = QRCode.createQRCode("just say goodbye", 500);
+        Bitmap bitmap = QRCode.createQRCode("just say goodbye", 500);
         ivBarCode.setImageBitmap(bitmap);
         Bitmap bitmap1 = QRCode.createQRCodeWithLogo("http://www.sina.com.cn/", 500, BitmapFactory.decodeResource(
                 getResources(), R.mipmap.ic_launcher
         ));
-        ivLogoBarCode.setImageBitmap(bitmap1);*/
+        ivLogoBarCode.setImageBitmap(bitmap1);
     }
 
     @OnClick({R.id.btnScanCode, R.id.btnCreateCode})
@@ -53,8 +55,8 @@ public class MainActivity extends BaseActivity {
             case R.id.btnCreateCode:
                 String inputString = etInputMessage.getText().toString().trim();
                 if (inputString != null && !inputString.equals("")){
-//                    Bitmap bitmap = QRCode.createQRCode(inputString,500);
-//                    ivCreateCode.setImageBitmap(bitmap);
+                    Bitmap bitmap = QRCode.createQRCode(inputString,500);
+                    ivCreateCode.setImageBitmap(bitmap);
                 }
 
                 break;

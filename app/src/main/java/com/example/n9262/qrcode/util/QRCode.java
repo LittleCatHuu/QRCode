@@ -2,6 +2,7 @@ package com.example.n9262.qrcode.util;
 
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
+import android.support.annotation.Nullable;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
@@ -23,6 +24,7 @@ public class QRCode {
         return createQRCode(text, 500);
     }
 
+    @Nullable
     public static Bitmap createQRCode(String text, int size) {
         Hashtable<EncodeHintType, String> hints = new Hashtable<>();
         hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
@@ -47,11 +49,11 @@ public class QRCode {
         }
     }
 
-    public static Bitmap creatQRCodeWithLogo(String text, Bitmap bitmap) {
-        return creatQRCodeWithLogo(text, 500, bitmap);
+    public static Bitmap createQRCodeWithLogo(String text, Bitmap bitmap) {
+        return createQRCodeWithLogo(text, 500, bitmap);
     }
 
-    public static Bitmap creatQRCodeWithLogo(String text, int size, Bitmap bitmap) {
+    public static Bitmap createQRCodeWithLogo(String text, int size, Bitmap bitmap) {
         try {
             IMAGE_HALFWIDTH = size / 10;
             Hashtable<EncodeHintType, Object> hints = new Hashtable<>();
@@ -94,5 +96,6 @@ public class QRCode {
             return null;
         }
     }
+
 }
 
