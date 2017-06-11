@@ -9,8 +9,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.n9262.qrcode.R;
-import com.example.n9262.qrcode.ScanCodeActivity;
-import com.example.n9262.qrcode.activity.BaseActivity;
 import com.example.n9262.qrcode.util.QRCode;
 
 import butterknife.BindView;

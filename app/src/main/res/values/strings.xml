@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">QRCode</string>
     <string name="title_activity_scan_code">scan page</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_float_action">FloatActionActivity</string>
 </resources>
